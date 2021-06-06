@@ -1,0 +1,28 @@
+$textWhite: #fff;
+$textBlack: #000;
+$buttonBg: #0066D9;
+$buttonBgHover: #528dd1;
+$darkBlue: #001A4D;
+$primary: #153862;
+$grey: #757575;
+
+@mixin breakpoint($point) {
+    @if $point == xl {
+        @media (max-width: 1200px) {@content;}
+    }
+    @else if $point == lg {
+        @media (max-width: 992px) {@content;}
+    }
+    @else if $point == mg {
+        @media (max-width: 830px) {@content;}
+    }
+    @else if $point == md {
+        @media (max-width: 768px) {@content;}
+    }
+    @else if $point == sm {
+        @media (max-width: 576px) {@content;}
+    }
+    @else if $point == xs {
+        @media (max-width: 340px) {@content;}
+    }
+}
